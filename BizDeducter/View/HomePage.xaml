@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+     x:Class="BizDeducter.View.HomePage"
+    Title="BizDeductor"
+    IsBusy="{Binding IsBusy}"
+    Icon="{Binding Icon}">
+    <ContentPage.Content>
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="10">
+
+        	<Label Text="Deductions For The Year" HorizontalOptions="Center" Font="Large" TextColor="Green" />
+
+        	<Label Text="{Binding Title}" HorizontalOptions="Center" Font="Large" TextColor="Green" />
+
+        	<Button x:Name="ButtonDeduction" Text="Add Deduction" TextColor="White" BackgroundColor="#77D065" />
+
+        	<Button x:Name="ButtonReports" Text="Export" TextColor="White" BackgroundColor="#77D065" />
+
+        	<Button x:Name="ButtonTaxServices" Text="Tax Services" TextColor="White" BackgroundColor="#77D065" />
+
+        	<ActivityIndicator IsVisible="{Binding Isbusy}" IsRunning="{Binding IsBusy}" />
+
+        </StackLayout>
+    </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

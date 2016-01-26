@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="BizDeducter.View.TaxBracketPage"
+Title="Tax Bracket Calc"
+IsBusy="{Binding IsBusy}"
+Icon="{Binding Icon}">
+<ContentPage.Content>
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="10" Orientation="Vertical">
+
+
+
+
+
+            <Label Text="Federal tax:" HorizontalOptions="Center" />
+            <Label Text="{Binding FederalTax}" Font="Large" TextColor="Red" HorizontalOptions="Center"/>
+
+            <Label Text="Taxable annual income" />
+            <Entry Keyboard="Numeric" Text="{Binding AnnualIncome}" />
+
+            <Label Text="Filing status:" />
+
+            <Picker SelectedIndex="{Binding FilingStatus}" >
+                <Picker.Items>
+
+                    <x:String>Single</x:String>
+                    <x:String>Married filed jointly</x:String>
+                    <x:String>Head of household</x:String>
+                    <x:String>Married filed separately</x:String>
+
+
+                </Picker.Items>
+
+            </Picker>
+
+            <Button Text="Calculate" Command="{Binding ButtonCommand}" TextColor="White" BackgroundColor="#77D065" />
+
+    </StackLayout>
+
+
+    </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+
+
+

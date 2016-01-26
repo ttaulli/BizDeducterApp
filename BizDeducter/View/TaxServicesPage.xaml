@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="BizDeducter.View.TaxServicesPage"
+    Title=""
+    IsBusy="{Binding IsBusy}"
+    Icon="{Binding Icon}">
+    <ContentPage.Content>
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="10">
+
+
+            <Label Text="Tax Services"  />
+
+            <Label TextColor="Gray" Text="Dread having to fill out your tax returns? Or maybe you received a notice from the IRS? Well, we can help out. Our mission at BizDeductor is to provide personalized tax preparation and advisory services, with a focus on ensuring that each client gets reliable and timely service, including the following:" />
+
+            <Label TextColor="Gray" Text="Federal And State Tax Preparation" FontAttributes="Bold" />
+
+            <Label TextColor="Gray" Text="We’ll not only help effectively deal with the many complex forms – whether for individuals or entities like corporations and partnerships -- but also find ways to reduce your taxes, such as with finding the right deductions and credits." />
+
+            <Label TextColor="Gray" Text="Estimated Tax Payments" FontAttributes="Bold" />
+
+            <Label TextColor="Gray" Text="As a business owner, you must make your own tax payments. At BizDeductor, we make the process seamless so as to avoid any interest and penalties." />
+
+            <Label TextColor="Gray" Text="Tax Relief and Resolution" FontAttributes="Bold" />
+
+            <Label TextColor="Gray" Text="We can help with issues concerning IRS actions, such as audits, liens, garnishments and bank levies." />
+
+            <Button x:Name="ButtonFeedback" Text="Contact" />
+
+
+
+        </StackLayout>
+    </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
