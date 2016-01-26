@@ -12,7 +12,7 @@
 
         	<Label Text="Deductions For The Year" HorizontalOptions="Center" Font="Large" TextColor="Green" />
 
-        	<Label Text="{Binding Title}" HorizontalOptions="Center" Font="Large" TextColor="Green" />
+        	<Label Text="{Binding TotalDeductionsString}" HorizontalOptions="Center" Font="Large" TextColor="Green" />
 
         	<Button x:Name="ButtonDeduction" Text="Add Deduction" TextColor="White" BackgroundColor="#77D065" />
 
@@ -24,5 +24,9 @@
 
         </StackLayout>
     </ScrollView>
+
+
+
+
     </ContentPage.Content>
 </ContentPage>
