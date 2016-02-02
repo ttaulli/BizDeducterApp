@@ -15,7 +15,7 @@ namespace BizDeducter.ViewModel
             if (expense == null)
             {
                 Expense = new Expense();
-                Title = "New Expense";
+                Title = "New Deduction";
             }
             else
             {
@@ -42,6 +42,7 @@ namespace BizDeducter.ViewModel
             try
             {
                 IsBusy = true;
+
 
                 //probably do some validation here before saving;
 

@@ -1,5 +1,59 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BizDeducter.View.Expenses.MileageExpensePage">
-    <ContentPage.Content>
+<ContentPage 
+xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="BizDeducter.View.Expenses.MileageExpensePage"
+    Title="{Binding Title}"
+    IsBusy="{Binding IsBusy}"
+    Icon="{Binding Icon}">
+      <ContentPage.Content>
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="10">
+
+			
+        	<Label Text="{Binding MilesString}" HorizontalOptions="Center" Font="Large" TextColor="Green" />
+
+        	<DatePicker HorizontalOptions="CenterAndExpand" Date="{Binding Expense.Date.Local}"/>
+
+        	<Entry Placeholder="Business purpose..." Text="{Binding Expense.Purpose}"/>
+
+			<Button x:Name="startTrip" Text="Start Trip" Command="{Binding GetGPSCommand}" TextColor="White" BackgroundColor="#77D065" />
+
+			<Label Text="{Binding Start}"  />
+
+			<Label Text="{Binding StartLat}"  />
+
+			<Label Text="{Binding StartLong}"  />
+
+			<Button x:Name="endTrip" Text="Stop Trip" Command="{Binding GetGPSCommandStop}" TextColor="White" BackgroundColor="#77D065"  />
+
+			<Label Text="{Binding Stop}"  />
+
+			<Label Text="{Binding StopLat}"  />
+
+			<Label Text="{Binding StopLong}"  />
+
+
+
+
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="*" />
+				</Grid.RowDefinitions>
+
+	    		<Label Text="Round Trip?" Grid.Row="0" Grid.Column="0" />
+
+       			<Switch IsToggled="{Binding GetRoundTrip}" Grid.Row="0" Grid.Column="1" />
+       	
+  			</Grid>
+
+        </StackLayout>
+    </ScrollView>
+
     </ContentPage.Content>
 </ContentPage>
+
+
+
+

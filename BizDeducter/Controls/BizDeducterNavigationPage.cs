@@ -20,6 +20,7 @@ namespace BizDeducter.Controls
 
 			BarBackgroundColor = Color.Green;
             BarTextColor = Color.White;
+
         }
     }
 }

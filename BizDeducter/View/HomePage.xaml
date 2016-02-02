@@ -4,6 +4,7 @@
      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
      x:Class="BizDeducter.View.HomePage"
     Title="BizDeductor"
+    NavigationPage.BackButtonTitle="Back"
     IsBusy="{Binding IsBusy}"
     Icon="{Binding Icon}">
     <ContentPage.Content>
@@ -17,6 +18,8 @@
         	<Button x:Name="ButtonDeduction" Text="Add Deduction" TextColor="White" BackgroundColor="#77D065" />
 
         	<Button x:Name="ButtonReports" Text="Export" TextColor="White" BackgroundColor="#77D065" />
+
+        	<Button x:Name="ButtonMileage" Text="Add Trip/Mileage" TextColor="White" BackgroundColor="#77D065" />
 
         	<Button x:Name="ButtonTaxServices" Text="Tax Services" TextColor="White" BackgroundColor="#77D065" />
 

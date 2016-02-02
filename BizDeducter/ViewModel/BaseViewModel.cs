@@ -47,7 +47,6 @@ namespace BizDeducter.ViewModel
 
 
 
-
         string icon = "slideout.png";
 
         /// <summary>

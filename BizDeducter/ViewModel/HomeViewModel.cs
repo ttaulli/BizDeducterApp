@@ -5,6 +5,7 @@ using BizDeducter.Model;
 using System.Collections.ObjectModel;
 using BizDeducter.Database;
 using Xamarin;
+using System.Linq;
 
 
 namespace BizDeducter.ViewModel
@@ -24,13 +25,6 @@ namespace BizDeducter.ViewModel
 			totalDeductions = 0;
 
 			expenses = new ObservableCollection<Expense>();
-
-
-			totalDeductions = expenses.Count;
-
-			TotalDeductionsString = string.Format("{0:C0}", totalDeductions);
-
-
 
 		}
 
@@ -65,6 +59,19 @@ namespace BizDeducter.ViewModel
 				var items = await ExpensesDatabase.Current.GetItems<Expense>();
 				//few ways to do this... maybe load on demand.
 				Expenses = new ObservableCollection<Expense>(items);
+
+
+				totalDeductions = 0;
+
+				var thisYearsExpenses = Expenses.Where(x => x.Date.Year == DateTime.UtcNow.Year);
+
+				foreach (var item in thisYearsExpenses)
+					totalDeductions = totalDeductions + item.Amount;
+
+				TotalDeductionsString = string.Format("{0:C0}", totalDeductions);
+				IsDirty = true;
+
+
 			}
 			catch(Exception ex)
 			{

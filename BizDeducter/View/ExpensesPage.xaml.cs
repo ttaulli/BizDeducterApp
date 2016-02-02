@@ -14,9 +14,6 @@ namespace BizDeducter.View
         {
             InitializeComponent();
             BindingContext = viewModel = new ExpensesViewModel(this);
-
-            ButtonMeals.Clicked += async (sender, e) => 
-                await Navigation.PushAsync(new MealsExpensePage());
             
             ButtonMileage.Clicked += async (sender, e) => 
                 await Navigation.PushAsync(new MileageExpensePage());

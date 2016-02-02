@@ -3,15 +3,12 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="BizDeducter.View.TaxServicesPage"
-    Title=""
+    Title="{Binding Title}"
     IsBusy="{Binding IsBusy}"
     Icon="{Binding Icon}">
     <ContentPage.Content>
     <ScrollView>
         <StackLayout Padding="10" Spacing="10">
-
-
-            <Label Text="Tax Services"  />
 
             <Label TextColor="Gray" Text="Dread having to fill out your tax returns? Or maybe you received a notice from the IRS? Well, we can help out. Our mission at BizDeductor is to provide personalized tax preparation and advisory services, with a focus on ensuring that each client gets reliable and timely service, including the following:" />
 

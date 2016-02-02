@@ -20,6 +20,7 @@ namespace BizDeducter.View.Expenses
 				{
 					Text="Save",
 					Command = viewModel.SaveExpenseCommand
+						
 				});
 
 

@@ -24,6 +24,9 @@ namespace BizDeducter.View
 			ButtonReports.Clicked += async (sender, e) => 
 				await Navigation.PushAsync (new ReportsPage ());
 
+			ButtonMileage.Clicked += async (sender, e) => 
+				await Navigation.PushAsync (new MileageExpensePage ());
+
 			ButtonTaxServices.Clicked += async (sender, e) => 
 				await Navigation.PushAsync (new TaxServicesPage ());
 
@@ -36,6 +39,8 @@ namespace BizDeducter.View
 			base.OnAppearing();
 			if (viewModel.Expenses.Count == 0 || viewModel.IsDirty)
 				viewModel.LoadExpensesCommand.Execute(null);
+
+		
 		}
 			
     }

@@ -2,70 +2,42 @@
 <ContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="BizDeducter.View.Expenses.OtherExpensePage">
-    <ContentPage.Content>
-    <TableView Intent="Settings">
-        <TableRoot>
-                <TableSection Title="Deduction Information">
-                	<ViewCell>
-                        <StackLayout Orientation="Horizontal" Spacing="10" Padding="10,0">
-                            <Label Text="" VerticalOptions="Center"/>
-                            <Picker HorizontalOptions="FillAndExpand" SelectedIndex="{Binding Expense.SubType}">
-                                <Picker.Items>
-                                    <x:String>Advertising</x:String> 
-                                    <x:String>Car and Truck Expense</x:String>
-                                    <x:String>Office Expense</x:String>
-                                    <x:String>Repairs and Maintenance</x:String>
-                                    <x:String>Other</x:String>
-                                    <x:String>Meals and Entertainment</x:String>
-                                </Picker.Items>
-                            </Picker> 
-                        </StackLayout>
-                    </ViewCell>
+    x:Class="BizDeducter.View.Expenses.OtherExpensePage"
+    Title="{Binding Title}"
+    >
+<ContentPage.Content>
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="10">
 
-                    <ViewCell>
+  			<Picker HorizontalOptions="FillAndExpand" SelectedIndex="{Binding Expense.SubType}">
+        		<Picker.Items>
+            		<x:String>Advertising</x:String> 
+                	<x:String>Car and Truck Expense</x:String>
+                	<x:String>Office Expense</x:String>
+                	<x:String>Repairs and Maintenance</x:String>
+                	<x:String>Other</x:String>
+                	<x:String>Meals and Entertainment</x:String>
+       			</Picker.Items>
+   			</Picker> 
 
-                    <Button x:Name="addCategory" Text="Add A New Category"  />
+        	<Button x:Name="addCategory" Text="Add A New Category" TextColor="White" BackgroundColor="#77D065"  />
 
-                    </ViewCell>
+        	<Entry Placeholder="Amount" Keyboard="Numeric" Text="{Binding Expense.Amount}"/>
 
-					<ViewCell>
-						<Entry Placeholder="Amount" Keyboard="Numeric" Text="{Binding Expense.Amount}"/>
-					</ViewCell>
-                    
-                    <ViewCell>
-                    	<Entry Placeholder="Business purpose..." Text="{Binding Expense.Purpose}"/>
+        	<Entry Placeholder="Business purpose..." Text="{Binding Expense.Purpose}"/>
 
-                    </ViewCell>
+            <Entry Placeholder="Where..." Text="{Binding Expense.Name}"/>
 
-                    <ViewCell>
-                    	<Entry Placeholder="Where..." Text="{Binding Expense.Name}"/>
-                   	</ViewCell>
+        	<Entry Placeholder="Who you met with..." Text="{Binding Expense.Who}"/>
 
-                   	<ViewCell>
-                    	<Entry Placeholder="Who you met with..." Text="{Binding Expense.Who}"/>
-                   	</ViewCell>
+        	<DatePicker HorizontalOptions="CenterAndExpand" Date="{Binding Expense.Date.Local}"/>
 
+            
+            <Button x:Name="takePhoto" Text="Take Photo Of The Receipt" TextColor="White" BackgroundColor="#77D065"   />
 
-                    <ViewCell>
-                        <DatePicker HorizontalOptions="CenterAndExpand" Date="{Binding Expense.Date}"/>
-                    </ViewCell>
+            <Image x:Name="image"/>
 
-					<ViewCell>
-
-               			<Image x:Name="image"/>
-
-                		<Button x:Name="takePhoto" Text="Take Photo Of The Receipt"  />
-
-
-        
-                	</ViewCell>
-                </TableSection>
-
-
-            </TableRoot>
-        </TableView>
-
-    
+        </StackLayout>
+    </ScrollView>
     </ContentPage.Content>
 </ContentPage>

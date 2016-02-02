@@ -40,6 +40,108 @@ namespace BizDeducter.Helpers
             }
         }
 
+	
+
+		const string StartKey = "start_key";
+		readonly string StartDefault = "No start location set yet";
+		public string Start 
+		{
+			get { return AppSettings.GetValueOrDefault<string>(StartKey, StartDefault); }
+			set
+			{
+				if (AppSettings.AddOrUpdateValue(StartKey, value))
+					OnPropertyChanged();
+			}
+		}
+
+		const string StartLatKey = "start_lat_key";
+		readonly double StartLatDefault = 0;
+		public double StartLat
+		{
+			get { return AppSettings.GetValueOrDefault<double>(StartLatKey, StartLatDefault); }
+			set
+			{
+				if (AppSettings.AddOrUpdateValue(StartLatKey, value))
+					OnPropertyChanged();
+			}
+		}
+
+		const string StartLongKey = "start_long_key";
+		readonly double StartLongDefault = 0;
+		public double StartLong
+		{
+			get { return AppSettings.GetValueOrDefault<double>(StartLongKey, StartLongDefault); }
+			set
+			{
+				if (AppSettings.AddOrUpdateValue(StartLongKey, value))
+					OnPropertyChanged();
+			}
+		}
+
+
+		const string StopKey = "stop_key";
+		readonly string StopDefault = "No end location set yet";
+		public string Stop 
+		{
+			get { return AppSettings.GetValueOrDefault<string>(StopKey, StopDefault); }
+			set
+			{
+				if (AppSettings.AddOrUpdateValue(StopKey, value))
+					OnPropertyChanged();
+			}
+		}
+
+		const string StopLatKey = "stop_lat_key";
+		readonly double StopLatDefault = 0;
+		public double StopLat
+		{
+			get { return AppSettings.GetValueOrDefault<double>(StopLatKey, StopLatDefault); }
+			set
+			{
+				if (AppSettings.AddOrUpdateValue(StopLatKey, value))
+					OnPropertyChanged();
+			}
+		}
+
+		const string StopLongKey = "stop_long_key";
+		readonly double StopLongDefault = 0;
+		public double StopLong
+		{
+			get { return AppSettings.GetValueOrDefault<double>(StopLongKey, StopLongDefault); }
+			set
+			{
+				if (AppSettings.AddOrUpdateValue(StopLongKey, value))
+					OnPropertyChanged();
+			}
+		}
+
+
+
+		const string MilesStringKey = "miles_string_key";
+		readonly string MilesStringDefault = "0 Miles";
+		public string MilesString 
+		{
+			get { return AppSettings.GetValueOrDefault<string>(MilesStringKey, MilesStringDefault); }
+			set
+			{
+				if (AppSettings.AddOrUpdateValue(MilesStringKey, value))
+					OnPropertyChanged();
+			}
+		}
+
+
+		const string GetRoundTripKey = "get_round_trip_key";
+		readonly bool GetRoundTripDefault = false;
+		public bool GetRoundTrip 
+		{
+			get { return AppSettings.GetValueOrDefault<bool>(GetRoundTripKey, GetRoundTripDefault); }
+			set
+			{
+				if (AppSettings.AddOrUpdateValue(GetRoundTripKey, value))
+					OnPropertyChanged();
+			}
+		}
+
         public bool IsLoggedIn => !string.IsNullOrWhiteSpace(Email);
 
 
