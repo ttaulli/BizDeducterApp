@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 using BizDeducter.ViewModel;
 using BizDeducter.View.Expenses;
-		
+	
 
 namespace BizDeducter.View
 {

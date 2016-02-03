@@ -8,10 +8,10 @@
     Icon="{Binding Icon}">
 
         <StackLayout Padding="10" Spacing="10">
-            <Button x:Name="ButtonMileage" Text="Mileage"/>
+            
 
             <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"/>
-            <ListView x:Name="ListViewExpenses" 
+            <ListView  
                       ItemsSource="{Binding Expenses}">
             </ListView>
         </StackLayout>

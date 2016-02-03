@@ -17,7 +17,7 @@ x:Class="BizDeducter.View.Expenses.MileageExpensePage"
 
         	<Entry Placeholder="Business purpose..." Text="{Binding Expense.Purpose}"/>
 
-			<Button x:Name="startTrip" Text="Start Trip" Command="{Binding GetGPSCommand}" TextColor="White" BackgroundColor="#77D065" />
+			<Button Text="Start Trip" Command="{Binding GetGPSCommand}" TextColor="White" BackgroundColor="#77D065" />
 
 			<Label Text="{Binding Start}"  />
 
@@ -25,7 +25,7 @@ x:Class="BizDeducter.View.Expenses.MileageExpensePage"
 
 			<Label Text="{Binding StartLong}"  />
 
-			<Button x:Name="endTrip" Text="Stop Trip" Command="{Binding GetGPSCommandStop}" TextColor="White" BackgroundColor="#77D065"  />
+			<Button Text="Stop Trip" Command="{Binding GetGPSCommandStop}" TextColor="White" BackgroundColor="#77D065"  />
 
 			<Label Text="{Binding Stop}"  />
 

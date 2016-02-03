@@ -26,8 +26,6 @@ namespace BizDeducter.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Lotz.Xam.Messaging.Resource.String.ApplicationName = global::BizDeducter.Droid.Resource.String.ApplicationName;
-			global::Lotz.Xam.Messaging.Resource.String.Hello = global::BizDeducter.Droid.Resource.String.Hello;
 			global::Xamarin.Forms.Platform.Resource.Animation.abc_fade_in = global::BizDeducter.Droid.Resource.Animation.abc_fade_in;
 			global::Xamarin.Forms.Platform.Resource.Animation.abc_fade_out = global::BizDeducter.Droid.Resource.Animation.abc_fade_out;
 			global::Xamarin.Forms.Platform.Resource.Animation.abc_grow_fade_in_from_bottom = global::BizDeducter.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -1726,20 +1724,20 @@ namespace BizDeducter.Droid
 			// aapt resource value: 0x7f010086
 			public const int buttonTintMode = 2130772102;
 			
-			// aapt resource value: 0x7f010001
-			public const int cameraBearing = 2130771969;
-			
-			// aapt resource value: 0x7f010002
-			public const int cameraTargetLat = 2130771970;
-			
-			// aapt resource value: 0x7f010003
-			public const int cameraTargetLng = 2130771971;
-			
 			// aapt resource value: 0x7f010004
-			public const int cameraTilt = 2130771972;
+			public const int cameraBearing = 2130771972;
 			
 			// aapt resource value: 0x7f010005
-			public const int cameraZoom = 2130771973;
+			public const int cameraTargetLat = 2130771973;
+			
+			// aapt resource value: 0x7f010006
+			public const int cameraTargetLng = 2130771974;
+			
+			// aapt resource value: 0x7f010007
+			public const int cameraTilt = 2130771975;
+			
+			// aapt resource value: 0x7f010008
+			public const int cameraZoom = 2130771976;
 			
 			// aapt resource value: 0x7f01001c
 			public const int cardBackgroundColor = 2130771996;
@@ -1765,8 +1763,8 @@ namespace BizDeducter.Droid
 			// aapt resource value: 0x7f010111
 			public const int checkedTextViewStyle = 2130772241;
 			
-			// aapt resource value: 0x7f010012
-			public const int circleCrop = 2130771986;
+			// aapt resource value: 0x7f010002
+			public const int circleCrop = 2130771970;
 			
 			// aapt resource value: 0x7f01009d
 			public const int closeIcon = 2130772125;
@@ -1972,11 +1970,11 @@ namespace BizDeducter.Droid
 			// aapt resource value: 0x7f01009a
 			public const int iconifiedByDefault = 2130772122;
 			
-			// aapt resource value: 0x7f010011
-			public const int imageAspectRatio = 2130771985;
+			// aapt resource value: 0x7f010001
+			public const int imageAspectRatio = 2130771969;
 			
-			// aapt resource value: 0x7f010010
-			public const int imageAspectRatioAdjust = 2130771984;
+			// aapt resource value: 0x7f010000
+			public const int imageAspectRatioAdjust = 2130771968;
 			
 			// aapt resource value: 0x7f010072
 			public const int indeterminateProgressStyle = 2130772082;
@@ -2065,8 +2063,8 @@ namespace BizDeducter.Droid
 			// aapt resource value: 0x7f0100f3
 			public const int listPreferredItemPaddingRight = 2130772211;
 			
-			// aapt resource value: 0x7f010006
-			public const int liteMode = 2130771974;
+			// aapt resource value: 0x7f010009
+			public const int liteMode = 2130771977;
 			
 			// aapt resource value: 0x7f01006a
 			public const int logo = 2130772074;
@@ -2074,8 +2072,8 @@ namespace BizDeducter.Droid
 			// aapt resource value: 0x7f010123
 			public const int logoDescription = 2130772259;
 			
-			// aapt resource value: 0x7f010000
-			public const int mapType = 2130771968;
+			// aapt resource value: 0x7f010003
+			public const int mapType = 2130771971;
 			
 			// aapt resource value: 0x7f01004b
 			public const int maxActionInlineWidth = 2130772043;
@@ -2383,29 +2381,29 @@ namespace BizDeducter.Droid
 			// aapt resource value: 0x7f0100a6
 			public const int track = 2130772134;
 			
-			// aapt resource value: 0x7f010007
-			public const int uiCompass = 2130771975;
-			
-			// aapt resource value: 0x7f01000f
-			public const int uiMapToolbar = 2130771983;
-			
-			// aapt resource value: 0x7f010008
-			public const int uiRotateGestures = 2130771976;
-			
-			// aapt resource value: 0x7f010009
-			public const int uiScrollGestures = 2130771977;
-			
 			// aapt resource value: 0x7f01000a
-			public const int uiTiltGestures = 2130771978;
+			public const int uiCompass = 2130771978;
+			
+			// aapt resource value: 0x7f010012
+			public const int uiMapToolbar = 2130771986;
 			
 			// aapt resource value: 0x7f01000b
-			public const int uiZoomControls = 2130771979;
+			public const int uiRotateGestures = 2130771979;
 			
 			// aapt resource value: 0x7f01000c
-			public const int uiZoomGestures = 2130771980;
+			public const int uiScrollGestures = 2130771980;
 			
 			// aapt resource value: 0x7f01000d
-			public const int useViewLifecycle = 2130771981;
+			public const int uiTiltGestures = 2130771981;
+			
+			// aapt resource value: 0x7f01000e
+			public const int uiZoomControls = 2130771982;
+			
+			// aapt resource value: 0x7f01000f
+			public const int uiZoomGestures = 2130771983;
+			
+			// aapt resource value: 0x7f010010
+			public const int useViewLifecycle = 2130771984;
 			
 			// aapt resource value: 0x7f0100a1
 			public const int voiceIcon = 2130772129;
@@ -2440,8 +2438,8 @@ namespace BizDeducter.Droid
 			// aapt resource value: 0x7f0100ae
 			public const int windowNoTitle = 2130772142;
 			
-			// aapt resource value: 0x7f01000e
-			public const int zOrderOnTop = 2130771982;
+			// aapt resource value: 0x7f010011
+			public const int zOrderOnTop = 2130771985;
 			
 			static Attribute()
 			{
@@ -3450,64 +3448,52 @@ namespace BizDeducter.Droid
 			public const int ic_play_light = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int ic_plusone_medium_off_client = 2130837614;
+			public const int ic_setting_dark = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int ic_plusone_small_off_client = 2130837615;
+			public const int ic_setting_light = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int ic_plusone_standard_off_client = 2130837616;
+			public const int icon = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int ic_plusone_tall_off_client = 2130837617;
+			public const int mr_ic_cast_dark = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int ic_setting_dark = 2130837618;
+			public const int mr_ic_cast_light = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int ic_setting_light = 2130837619;
+			public const int mr_ic_media_route_connecting_mono_dark = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int icon = 2130837620;
+			public const int mr_ic_media_route_connecting_mono_light = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int mr_ic_cast_dark = 2130837621;
+			public const int mr_ic_media_route_mono_dark = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int mr_ic_cast_light = 2130837622;
+			public const int mr_ic_media_route_mono_light = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int mr_ic_media_route_connecting_mono_dark = 2130837623;
+			public const int mr_ic_pause_dark = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int mr_ic_media_route_connecting_mono_light = 2130837624;
+			public const int mr_ic_pause_light = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int mr_ic_media_route_mono_dark = 2130837625;
+			public const int mr_ic_play_dark = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int mr_ic_media_route_mono_light = 2130837626;
+			public const int mr_ic_play_light = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int mr_ic_pause_dark = 2130837627;
+			public const int mr_ic_settings_dark = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int mr_ic_pause_light = 2130837628;
+			public const int mr_ic_settings_light = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int mr_ic_play_dark = 2130837629;
-			
-			// aapt resource value: 0x7f02007e
-			public const int mr_ic_play_light = 2130837630;
-			
-			// aapt resource value: 0x7f02007f
-			public const int mr_ic_settings_dark = 2130837631;
-			
-			// aapt resource value: 0x7f020080
-			public const int mr_ic_settings_light = 2130837632;
-			
-			// aapt resource value: 0x7f020081
-			public const int notification_template_icon_bg = 2130837633;
+			public const int notification_template_icon_bg = 2130837629;
 			
 			static Drawable()
 			{
@@ -3570,11 +3556,11 @@ namespace BizDeducter.Droid
 			// aapt resource value: 0x7f0a0040
 			public const int activity_chooser_view_content = 2131361856;
 			
-			// aapt resource value: 0x7f0a000f
-			public const int adjust_height = 2131361807;
+			// aapt resource value: 0x7f0a000a
+			public const int adjust_height = 2131361802;
 			
-			// aapt resource value: 0x7f0a0010
-			public const int adjust_width = 2131361808;
+			// aapt resource value: 0x7f0a000b
+			public const int adjust_width = 2131361803;
 			
 			// aapt resource value: 0x7f0a004a
 			public const int alertTitle = 2131361866;
@@ -3690,8 +3676,8 @@ namespace BizDeducter.Droid
 			// aapt resource value: 0x7f0a002b
 			public const int homeAsUp = 2131361835;
 			
-			// aapt resource value: 0x7f0a000a
-			public const int hybrid = 2131361802;
+			// aapt resource value: 0x7f0a000d
+			public const int hybrid = 2131361805;
 			
 			// aapt resource value: 0x7f0a0045
 			public const int icon = 2131361861;
@@ -3747,11 +3733,11 @@ namespace BizDeducter.Droid
 			// aapt resource value: 0x7f0a003a
 			public const int never = 2131361850;
 			
-			// aapt resource value: 0x7f0a000b
-			public const int none = 2131361803;
-			
 			// aapt resource value: 0x7f0a000c
-			public const int normal = 2131361804;
+			public const int none = 2131361804;
+			
+			// aapt resource value: 0x7f0a000e
+			public const int normal = 2131361806;
 			
 			// aapt resource value: 0x7f0a0015
 			public const int parallax = 2131361813;
@@ -3780,8 +3766,8 @@ namespace BizDeducter.Droid
 			// aapt resource value: 0x7f0a006d
 			public const int route_name = 2131361901;
 			
-			// aapt resource value: 0x7f0a000d
-			public const int satellite = 2131361805;
+			// aapt resource value: 0x7f0a000f
+			public const int satellite = 2131361807;
 			
 			// aapt resource value: 0x7f0a0031
 			public const int screen = 2131361841;
@@ -3882,8 +3868,8 @@ namespace BizDeducter.Droid
 			// aapt resource value: 0x7f0a0029
 			public const int tabMode = 2131361833;
 			
-			// aapt resource value: 0x7f0a000e
-			public const int terrain = 2131361806;
+			// aapt resource value: 0x7f0a0010
+			public const int terrain = 2131361808;
 			
 			// aapt resource value: 0x7f0a0083
 			public const int text = 2131361923;
@@ -4200,68 +4186,68 @@ namespace BizDeducter.Droid
 			// aapt resource value: 0x7f05002d
 			public const int appbar_scrolling_view_behavior = 2131034157;
 			
-			// aapt resource value: 0x7f050001
-			public const int auth_google_play_services_client_facebook_display_name = 2131034113;
+			// aapt resource value: 0x7f050003
+			public const int auth_google_play_services_client_facebook_display_name = 2131034115;
 			
-			// aapt resource value: 0x7f050000
-			public const int auth_google_play_services_client_google_display_name = 2131034112;
+			// aapt resource value: 0x7f050002
+			public const int auth_google_play_services_client_google_display_name = 2131034114;
 			
-			// aapt resource value: 0x7f050004
-			public const int common_android_wear_notification_needs_update_text = 2131034116;
+			// aapt resource value: 0x7f050006
+			public const int common_android_wear_notification_needs_update_text = 2131034118;
+			
+			// aapt resource value: 0x7f050013
+			public const int common_android_wear_update_text = 2131034131;
 			
 			// aapt resource value: 0x7f050011
-			public const int common_android_wear_update_text = 2131034129;
-			
-			// aapt resource value: 0x7f05000f
-			public const int common_android_wear_update_title = 2131034127;
+			public const int common_android_wear_update_title = 2131034129;
 			
 			// aapt resource value: 0x7f05001f
 			public const int common_google_play_services_api_unavailable_text = 2131034143;
 			
+			// aapt resource value: 0x7f05000f
+			public const int common_google_play_services_enable_button = 2131034127;
+			
+			// aapt resource value: 0x7f05000e
+			public const int common_google_play_services_enable_text = 2131034126;
+			
 			// aapt resource value: 0x7f05000d
-			public const int common_google_play_services_enable_button = 2131034125;
-			
-			// aapt resource value: 0x7f05000c
-			public const int common_google_play_services_enable_text = 2131034124;
-			
-			// aapt resource value: 0x7f05000b
-			public const int common_google_play_services_enable_title = 2131034123;
-			
-			// aapt resource value: 0x7f050006
-			public const int common_google_play_services_error_notification_requested_by_msg = 2131034118;
-			
-			// aapt resource value: 0x7f05000a
-			public const int common_google_play_services_install_button = 2131034122;
+			public const int common_google_play_services_enable_title = 2131034125;
 			
 			// aapt resource value: 0x7f050008
-			public const int common_google_play_services_install_text_phone = 2131034120;
+			public const int common_google_play_services_error_notification_requested_by_msg = 2131034120;
+			
+			// aapt resource value: 0x7f05000c
+			public const int common_google_play_services_install_button = 2131034124;
+			
+			// aapt resource value: 0x7f05000a
+			public const int common_google_play_services_install_text_phone = 2131034122;
+			
+			// aapt resource value: 0x7f05000b
+			public const int common_google_play_services_install_text_tablet = 2131034123;
 			
 			// aapt resource value: 0x7f050009
-			public const int common_google_play_services_install_text_tablet = 2131034121;
+			public const int common_google_play_services_install_title = 2131034121;
+			
+			// aapt resource value: 0x7f050019
+			public const int common_google_play_services_invalid_account_text = 2131034137;
+			
+			// aapt resource value: 0x7f050018
+			public const int common_google_play_services_invalid_account_title = 2131034136;
 			
 			// aapt resource value: 0x7f050007
-			public const int common_google_play_services_install_title = 2131034119;
+			public const int common_google_play_services_needs_enabling_title = 2131034119;
 			
 			// aapt resource value: 0x7f050017
-			public const int common_google_play_services_invalid_account_text = 2131034135;
+			public const int common_google_play_services_network_error_text = 2131034135;
 			
 			// aapt resource value: 0x7f050016
-			public const int common_google_play_services_invalid_account_title = 2131034134;
+			public const int common_google_play_services_network_error_title = 2131034134;
 			
 			// aapt resource value: 0x7f050005
-			public const int common_google_play_services_needs_enabling_title = 2131034117;
+			public const int common_google_play_services_notification_needs_update_title = 2131034117;
 			
-			// aapt resource value: 0x7f050015
-			public const int common_google_play_services_network_error_text = 2131034133;
-			
-			// aapt resource value: 0x7f050014
-			public const int common_google_play_services_network_error_title = 2131034132;
-			
-			// aapt resource value: 0x7f050003
-			public const int common_google_play_services_notification_needs_update_title = 2131034115;
-			
-			// aapt resource value: 0x7f050002
-			public const int common_google_play_services_notification_ticker = 2131034114;
+			// aapt resource value: 0x7f050004
+			public const int common_google_play_services_notification_ticker = 2131034116;
 			
 			// aapt resource value: 0x7f050021
 			public const int common_google_play_services_sign_in_failed_text = 2131034145;
@@ -4269,38 +4255,38 @@ namespace BizDeducter.Droid
 			// aapt resource value: 0x7f050020
 			public const int common_google_play_services_sign_in_failed_title = 2131034144;
 			
-			// aapt resource value: 0x7f050018
-			public const int common_google_play_services_unknown_issue = 2131034136;
-			
 			// aapt resource value: 0x7f05001a
-			public const int common_google_play_services_unsupported_text = 2131034138;
+			public const int common_google_play_services_unknown_issue = 2131034138;
 			
-			// aapt resource value: 0x7f050019
-			public const int common_google_play_services_unsupported_title = 2131034137;
+			// aapt resource value: 0x7f05001c
+			public const int common_google_play_services_unsupported_text = 2131034140;
 			
 			// aapt resource value: 0x7f05001b
-			public const int common_google_play_services_update_button = 2131034139;
+			public const int common_google_play_services_unsupported_title = 2131034139;
 			
-			// aapt resource value: 0x7f050010
-			public const int common_google_play_services_update_text = 2131034128;
-			
-			// aapt resource value: 0x7f05000e
-			public const int common_google_play_services_update_title = 2131034126;
-			
-			// aapt resource value: 0x7f050013
-			public const int common_google_play_services_updating_text = 2131034131;
+			// aapt resource value: 0x7f05001d
+			public const int common_google_play_services_update_button = 2131034141;
 			
 			// aapt resource value: 0x7f050012
-			public const int common_google_play_services_updating_title = 2131034130;
+			public const int common_google_play_services_update_text = 2131034130;
+			
+			// aapt resource value: 0x7f050010
+			public const int common_google_play_services_update_title = 2131034128;
+			
+			// aapt resource value: 0x7f050015
+			public const int common_google_play_services_updating_text = 2131034133;
+			
+			// aapt resource value: 0x7f050014
+			public const int common_google_play_services_updating_title = 2131034132;
 			
 			// aapt resource value: 0x7f05001e
 			public const int common_open_on_phone = 2131034142;
 			
-			// aapt resource value: 0x7f05001c
-			public const int common_signin_button_text = 2131034140;
+			// aapt resource value: 0x7f050000
+			public const int common_signin_button_text = 2131034112;
 			
-			// aapt resource value: 0x7f05001d
-			public const int common_signin_button_text_long = 2131034141;
+			// aapt resource value: 0x7f050001
+			public const int common_signin_button_text_long = 2131034113;
 			
 			// aapt resource value: 0x7f050022
 			public const int mr_media_route_button_content_description = 2131034146;
@@ -5881,9 +5867,9 @@ namespace BizDeducter.Droid
 			
 			public static int[] LoadingImageView = new int[]
 			{
-					2130771984,
-					2130771985,
-					2130771986};
+					2130771968,
+					2130771969,
+					2130771970};
 			
 			// aapt resource value: 2
 			public const int LoadingImageView_circleCrop = 2;
@@ -5896,9 +5882,6 @@ namespace BizDeducter.Droid
 			
 			public static int[] MapAttrs = new int[]
 			{
-					2130771968,
-					2130771969,
-					2130771970,
 					2130771971,
 					2130771972,
 					2130771973,
@@ -5911,7 +5894,10 @@ namespace BizDeducter.Droid
 					2130771980,
 					2130771981,
 					2130771982,
-					2130771983};
+					2130771983,
+					2130771984,
+					2130771985,
+					2130771986};
 			
 			// aapt resource value: 1
 			public const int MapAttrs_cameraBearing = 1;

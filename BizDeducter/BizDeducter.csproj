@@ -36,9 +36,6 @@
       <DependentUpon>MenuPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\RootPage.cs" />
-    <Compile Include="View\ExpensesPage.xaml.cs">
-      <DependentUpon>ExpensesPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Controls\BizDeducterNavigationPage.cs" />
     <Compile Include="View\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
@@ -156,10 +153,6 @@
     <EmbeddedResource Include="View\MenuPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <LogicalName>MenuPage.xaml</LogicalName>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\ExpensesPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <LogicalName>ExpensesPage.xaml</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="View\HomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
