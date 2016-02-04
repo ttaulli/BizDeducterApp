@@ -250,7 +250,7 @@ namespace BizDeducter.ViewModel
 						}
 						catch(Exception ex)
 						{
-							await page.DisplayAlert("Error", "Error", "OK");
+							
 						}
 
 						Title = "Mileage";
@@ -314,7 +314,7 @@ namespace BizDeducter.ViewModel
 						}
 						catch(Exception ex)
 						{
-							await page.DisplayAlert("Error", "Error", "OK");
+							
 						}
 
 						Title = "Mileage";

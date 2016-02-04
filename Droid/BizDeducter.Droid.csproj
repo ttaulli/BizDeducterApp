@@ -132,6 +132,15 @@
     <Reference Include="ImageCircle.Forms.Plugin.Abstractions">
       <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.1.4.1\lib\MonoAndroid10\ImageCircle.Forms.Plugin.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="Syncfusion.SfNumericTextBox.Android">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.13.4.0.53\lib\MonoAndroid10\Syncfusion.SfNumericTextBox.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericTextBox.XForms.Android">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.13.4.0.53\lib\MonoAndroid10\Syncfusion.SfNumericTextBox.XForms.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfNumericTextBox.XForms">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfNumericTextBox.13.4.0.53\lib\MonoAndroid10\Syncfusion.SfNumericTextBox.XForms.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BizDeducter\BizDeducter.csproj">
