@@ -4105,13 +4105,16 @@ namespace BizDeducter.Droid
 			public const int select_dialog_singlechoice_material = 2130903086;
 			
 			// aapt resource value: 0x7f03002f
-			public const int support_simple_spinner_dropdown_item = 2130903087;
+			public const int sfnumerictextbox_layout = 2130903087;
 			
 			// aapt resource value: 0x7f030030
-			public const int tabs = 2130903088;
+			public const int support_simple_spinner_dropdown_item = 2130903088;
 			
 			// aapt resource value: 0x7f030031
-			public const int toolbar = 2130903089;
+			public const int tabs = 2130903089;
+			
+			// aapt resource value: 0x7f030032
+			public const int toolbar = 2130903090;
 			
 			static Layout()
 			{

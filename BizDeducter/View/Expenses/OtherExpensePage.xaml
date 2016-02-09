@@ -4,24 +4,24 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="BizDeducter.View.Expenses.OtherExpensePage"
     Title="{Binding Title}"
+    NavigationPage.BackButtonTitle="Back"
+	IsBusy="{Binding IsBusy}"
+    Icon="{Binding Icon}"
     >
 <ContentPage.Content>
     <ScrollView>
         <StackLayout Padding="10" Spacing="10">
 
-  			<Picker HorizontalOptions="FillAndExpand" SelectedIndex="{Binding Expense.SubType}">
-        		<Picker.Items>
-            		<x:String>Advertising</x:String> 
-                	<x:String>Car and Truck Expense</x:String>
-                	<x:String>Office Expense</x:String>
-                	<x:String>Repairs and Maintenance</x:String>
-                	<x:String>Other</x:String>
-                	<x:String>Meals and Entertainment</x:String>
-       			</Picker.Items>
-   			</Picker> 
 
-        	<Button x:Name="addCategory" Text="Add A New Category" TextColor="White" BackgroundColor="#77D065"  />
+        	<Label Text="Tax Deduction Category:" HorizontalOptions="Center" TextColor="Green" />
 
+        	<Label Text="{Binding CategoryString}" HorizontalOptions="Center" TextColor="Green" />
+
+        	<Button x:Name="ButtonCategory" Text="Select Another Category" TextColor="White" BackgroundColor="#77D065" />
+
+
+
+        	
         	<Entry Placeholder="Amount" Keyboard="Numeric" Text="{Binding Expense.Amount}"/>
 
         	<Entry Placeholder="Business purpose..." Text="{Binding Expense.Purpose}"/>

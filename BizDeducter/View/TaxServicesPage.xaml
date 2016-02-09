@@ -24,7 +24,8 @@
 
             <Label TextColor="Gray" Text="We can help with issues concerning IRS actions, such as audits, liens, garnishments and bank levies." />
 
-            <Button x:Name="ButtonFeedback" Text="Contact" />
+            <Button x:Name="sendEmail" Text="Contact" TextColor="White" BackgroundColor="#77D065"   />
+
 
 
 

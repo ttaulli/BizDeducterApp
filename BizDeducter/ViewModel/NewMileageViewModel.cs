@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using BizDeducter.Model;
 using Xamarin.Forms;
 using System.Threading.Tasks;
@@ -7,18 +8,25 @@ using Plugin.Geolocator;
 using Plugin.Settings;
 using Xamarin.Forms.Maps;
 
-
-
-
 using System.Windows.Input;
 using System.ComponentModel;
+
+using System.Net.Http;
+using System.Globalization;
+using Newtonsoft.Json;
 
 namespace BizDeducter.ViewModel
 {
 	public class NewMileageViewModel : BaseViewModel
 	{
 
+
+
+
+
+
 		public Expense Expense { get; set; }
+
 
 		public double deg2rad (double deg) {
 			return (deg * Math.PI / 180.0);
@@ -123,6 +131,8 @@ namespace BizDeducter.ViewModel
 			}
 		}
 
+
+
 		public bool GetRoundTrip
 		{
 			get { return Settings.GetRoundTrip; }
@@ -137,6 +147,13 @@ namespace BizDeducter.ViewModel
 		}
 
 
+
+
+
+
+
+
+
 		public NewMileageViewModel (Page page, Expense expense = null) : base(page)
 		{
 
@@ -149,6 +166,7 @@ namespace BizDeducter.ViewModel
 			{
 				Title = "Mileage";
 			}
+
 
 
 
@@ -200,6 +218,7 @@ namespace BizDeducter.ViewModel
 				StopLat = 0;
 				StopLat = 0;
 				GetRoundTrip = false;
+				MilesString = "0 miles";
 
 
 
@@ -288,28 +307,60 @@ namespace BizDeducter.ViewModel
 
 							await page.DisplayAlert("Addresses", l, "OK");
 							Stop = l;
+						
+							double oLat = StartLat;
+							double oLong = StartLong;
+							double dLat = StopLat;
+							double dLong = StopLong;
 
-							double Lat1 = deg2rad(StartLat);
-							double Lat2 = deg2rad(StopLat);
-		
-							double Long1 = deg2rad(StartLong);
-							double Long2 = deg2rad(StopLong);
+							using(var client = new HttpClient())
+							{
 
-							double d = Math.Acos(
-								(Math.Sin(Lat1) * Math.Sin(Lat2)) +
-								(Math.Cos(Lat1) * Math.Cos(Lat2)) 
-								* Math.Cos(Long2 - Long1));
+
+								//you will have doubles and Invariant culture is very important so they are always . and not , for decimals
+								var finalOLat = oLat.ToString(CultureInfo.InvariantCulture);
+								var finalOLong = oLong.ToString(CultureInfo.InvariantCulture);
+								var finalDLat = dLat.ToString(CultureInfo.InvariantCulture);
+								var finalDLong = dLong.ToString(CultureInfo.InvariantCulture);
+
+								//make sure you register for your own key
+								var key = "AIzaSyBj-0KuIUut7p928Oz22y95PplLOwBI94Q";
+								var api = string.Format("https://maps.googleapis.com/maps/api/distancematrix/json?origins={0},{1}&destinations={2},{3}&language=en&units=imperial&key={4}",
+									finalOLat, finalOLong, finalDLat, finalDLong, key);
+
+								var json = await client.GetStringAsync(api);
+
+								var item = JsonConvert.DeserializeObject<DistanceCalculation>(json);
+
+
+								char[] MyChar = {'m','i',' '};
+								string NewString = item?.Rows?[0]?.Elements?[0].Distance?.Text.TrimEnd(MyChar);
+
+								Expense.Miles = Convert.ToDouble(NewString);
 							
-							Expense.Miles = ((6378137 * d) / 1000) * 0.621371;
 
-							MilesString = string.Format("{0:N0}", Expense.Miles);
+								MilesString = string.Format("{0:0.##}", Expense.Miles);
 
-							if (MilesString == "1") {
-								MilesString = MilesString + " Mile";
-							} else {
 
-								MilesString = MilesString + " Miles";
+
+								if (MilesString == "1") {
+									MilesString = MilesString + " Mile";
+								} else {
+
+									MilesString = MilesString + " Miles";
+								}
+
+									
+									
 							}
+							
+
+
+
+
+
+
+
 						
 						}
 						catch(Exception ex)

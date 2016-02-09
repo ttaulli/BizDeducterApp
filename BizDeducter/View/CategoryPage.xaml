@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="BizDeducter.View.CategoryPage"
+    Title="{Binding Title}"
+    IsBusy="{Binding IsBusy}"
+    Icon="{Binding Icon}">
+	<ContentPage.Content>
+
+	        <StackLayout Padding="10" Spacing="10">
+            
+
+            <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"/>
+            <ListView x:Name="listView"
+                      ItemsSource="{Binding Categories}" ItemTapped="OnTap" >
+            </ListView>
+        </StackLayout>
+
+	</ContentPage.Content>
+</ContentPage>
+
+
+
+

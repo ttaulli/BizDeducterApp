@@ -3,7 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
      x:Class="BizDeducter.View.HomePage"
-    Title="BizDeductor"
+    Title="{Binding Title}"
     NavigationPage.BackButtonTitle="Back"
     IsBusy="{Binding IsBusy}"
     Icon="{Binding Icon}">

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using Plugin.Media;
+using Plugin.Messaging;
 using BizDeducter.ViewModel;
 
 namespace BizDeducter.View
@@ -13,9 +15,22 @@ namespace BizDeducter.View
             InitializeComponent();
             BindingContext = new TaxServicesViewModel(this);
 
-			ButtonFeedback.Clicked += async (sender, e) => 
-				await Navigation.PushAsync (new FeedbackPage ());
+			sendEmail.Clicked += async (sender, args) =>
+			{
 
+
+				var emailTask = MessagingPlugin.EmailMessenger;
+				if (emailTask.CanSendEmail)
+				{
+					// Send simple e-mail to single receiver without attachments, bcc, cc etc.
+					emailTask.SendEmail("ttaulli@gmail.com", "BizDeductor", "");
+
+
+
+				}  
+
+
+			};
 
         }
     }

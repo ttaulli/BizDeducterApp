@@ -12,16 +12,21 @@ namespace BizDeducter.View.Expenses
 	{
 		NewExpenseViewModel viewModel;
 
+
+
 		public OtherExpensePage()
 		{
 			InitializeComponent();
 			BindingContext = viewModel = new NewExpenseViewModel(this);
-			ToolbarItems.Add(new ToolbarItem
-				{
-					Text="Save",
-					Command = viewModel.SaveExpenseCommand
+			ToolbarItems.Add (new ToolbarItem {
+				Text = "Save",
+				Command = viewModel.SaveExpenseCommand
 						
-				});
+			});
+
+			ButtonCategory.Clicked += async (sender, e) => 
+				await Navigation.PushAsync (new CategoryPage ());
+
 
 
 
@@ -56,12 +61,21 @@ namespace BizDeducter.View.Expenses
 						return stream;
 					}); 
 			};
-
-
-
-
-
+				
 
 		}
+			
+
+
+		protected override void OnAppearing()
+		{
+			base.OnAppearing();
+
+				viewModel.LoadCategoriesCommand.Execute(null);
+
+		}
+
+
+
 	}
 }

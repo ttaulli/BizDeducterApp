@@ -24,8 +24,8 @@ namespace BizDeducter.View
                 {
                     new NavigationItem { Name = "Home", Id = PageId.Home },
 					new NavigationItem { Name = "Tax Calendar", Id = PageId.TaxCalendar },
-					new NavigationItem { Name = "Tax Bracket Calc", Id = PageId.TaxBracket },
-					new NavigationItem { Name = "Feedback", Id = PageId.Feedback }
+					new NavigationItem { Name = "Tax Bracket Calc", Id = PageId.TaxBracket }
+					
                 };
 
             ListViewMenu.SelectedItem = menuItems[0];

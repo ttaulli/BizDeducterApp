@@ -8,7 +8,26 @@ namespace BizDeducter.ViewModel
 {
     public class NewExpenseViewModel : BaseViewModel
     {
-        public Expense Expense { get; set;}
+        public Expense Expense { get; set; }
+
+		public Category Category { get; set; }
+
+		public string CategoryString { get; set; }
+
+		public string CurrentCategory
+		{
+			get { return Settings.CurrentCategory; }
+			set
+			{
+				if (Settings.CurrentCategory == value)
+					return;
+
+				Settings.CurrentCategory = value;
+				OnPropertyChanged();
+			}
+		}
+
+
         public NewExpenseViewModel(Page page, Expense expense = null) : base(page)
         {
             
@@ -21,7 +40,55 @@ namespace BizDeducter.ViewModel
             {
                 Title = "Expense Details";
             }
+
+
+			CategoryString = CurrentCategory;
+
+
         }
+
+
+
+
+
+		Command loadCategoriesCommand;
+		public Command LoadCategoriesCommand
+		{
+			get { return loadCategoriesCommand ?? (loadCategoriesCommand = new Command(async () =>await ExecuteLoadCategories()));}
+		}
+
+		async Task ExecuteLoadCategories()
+		{
+			if (IsBusy)
+				return;
+
+
+			try
+			{
+				IsBusy = true;
+				CategoryString = CurrentCategory;
+
+
+				OnPropertyChanged("CategoryString");
+
+			}
+			catch(Exception ex)
+			{
+				ex.Data["info"] = "LoadCategories";
+				Insights.Report(ex);
+				await page.DisplayAlert("Error", "Unable to load categories, please try again.", "OK");
+
+			}
+			finally
+			{
+				IsBusy = false;
+			}
+		}
+
+
+
+
+
 
         Command saveExpenseCommand;
         public Command SaveExpenseCommand

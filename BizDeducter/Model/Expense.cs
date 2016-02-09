@@ -5,23 +5,14 @@ using System.Threading.Tasks;
 namespace BizDeducter.Model
 {
 
-    public enum ExpenseSubType
-    {
-        Advertising,
-        Car,
-        Office,
-        Repairs,
-        Other,
-		Meals
-    }
 
 
     public class Expense : BusinessEntityBase
     {
         //database fields
         public string Name { get; set; } = string.Empty;
-        public double Amount { get; set; } = 0.0;
-        public ExpenseSubType SubType { get; set;} = ExpenseSubType.Meals;
+        public double Amount { get; set; } = 0.00;
+		public string SubType { get; set;} = "Miscellaneous";
         public string Purpose { get; set; } = string.Empty;
 		public string Receipt { get; set; } = string.Empty;
 		public string Who { get; set; } = string.Empty;
@@ -47,7 +38,7 @@ namespace BizDeducter.Model
 
         public override string ToString()
         {
-            return $"-{IsMileage}";
+            return $"-{SubType}";
         }
     }
 }

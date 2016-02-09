@@ -10,6 +10,7 @@ namespace BizDeducter.ViewModel
             Title = "Tax Services";
             Subtitle = "Subtitle";
         }
+
     }
 }
 

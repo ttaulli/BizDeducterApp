@@ -142,6 +142,31 @@ namespace BizDeducter.Helpers
 			}
 		}
 
+
+		const string CategoriesPreloadedKey = "categories_preloaded_key";
+		readonly bool CategoriesPreloadedDefault = false;
+		public bool CategoriesPreloaded 
+		{
+			get { return AppSettings.GetValueOrDefault<bool>(CategoriesPreloadedKey, CategoriesPreloadedDefault); }
+			set
+			{
+				if (AppSettings.AddOrUpdateValue(CategoriesPreloadedKey, value))
+					OnPropertyChanged();
+			}
+		}
+
+		const string CurrentCategoryKey = "current_category_key";
+		readonly string CurrentCategoryDefault = "Miscellaneous";
+		public string CurrentCategory 
+		{
+			get { return AppSettings.GetValueOrDefault<string>(CurrentCategoryKey, CurrentCategoryDefault); }
+			set
+			{
+				if (AppSettings.AddOrUpdateValue(CurrentCategoryKey, value))
+					OnPropertyChanged();
+			}
+		}
+
         public bool IsLoggedIn => !string.IsNullOrWhiteSpace(Email);
 
 

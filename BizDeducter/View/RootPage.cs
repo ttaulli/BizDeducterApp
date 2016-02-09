@@ -37,9 +37,6 @@ namespace BizDeducter.View
                     case PageId.Home:
                         Pages.Add(id, new BizDeducterNavigationPage(new HomePage()));
                         break;
-					case PageId.Feedback:
-						Pages.Add(id, new BizDeducterNavigationPage(new FeedbackPage()));
-						break;
 					case PageId.TaxCalendar:
 						Pages.Add(id, new BizDeducterNavigationPage(new TaxCalendarPage()));
 						break;

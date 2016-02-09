@@ -40,7 +40,6 @@ namespace BizDeducter.View
 			if (viewModel.Expenses.Count == 0 || viewModel.IsDirty)
 				viewModel.LoadExpensesCommand.Execute(null);
 
-		
 		}
 			
     }

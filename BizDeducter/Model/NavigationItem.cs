@@ -8,7 +8,6 @@ namespace BizDeducter.Model
         Home,
         Expenses,
         Reports,
-		Feedback,
 		TaxCalendar,
 		TaxBracket
     }
