@@ -4,11 +4,21 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="BizDeducter.View.Expenses.OtherExpensePage"
     Title="{Binding Title}"
+    xmlns:numeric="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
     NavigationPage.BackButtonTitle="Back"
+    xmlns:local="clr-namespace:BizDeducter.Converter"
 	IsBusy="{Binding IsBusy}"
     Icon="{Binding Icon}"
     >
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <local:NumericTextBoxConverter x:Key="converter"/>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  
 <ContentPage.Content>
+  
     <ScrollView>
         <StackLayout Padding="10" Spacing="10">
 
@@ -19,10 +29,9 @@
 
         	<Button x:Name="ButtonCategory" Text="Select Another Category" TextColor="White" BackgroundColor="#77D065" />
 
+          <numeric:SfNumericTextBox x:Name="numericTextbox" Value="{Binding Expense.Amount, Converter={StaticResource converter}}" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" FormatString="c" Watermark="$0.0" AllowNull="true"/>
 
-
-        	
-        	<Entry Placeholder="Amount" Keyboard="Numeric" Text="{Binding Expense.Amount}"/>
+        	<!--<Entry Placeholder="Amount" Keyboard="Numeric" Text="{Binding Expense.Amount}"/>-->
 
         	<Entry Placeholder="Business purpose..." Text="{Binding Expense.Purpose}"/>
 

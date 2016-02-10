@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 using BizDeducter.ViewModel;
 using Plugin.Media;
-
+using System.IO;
+using System.Text;
 
 namespace BizDeducter.View.Expenses
 {
@@ -27,7 +28,10 @@ namespace BizDeducter.View.Expenses
 			ButtonCategory.Clicked += async (sender, e) => 
 				await Navigation.PushAsync (new CategoryPage ());
 
-
+			if (Device.OS == TargetPlatform.iOS) 
+			{
+				numericTextbox.HeightRequest = 30;
+			}
 
 
 			takePhoto.Clicked += async (sender, args) =>
@@ -53,21 +57,19 @@ namespace BizDeducter.View.Expenses
 				await DisplayAlert("File Location", file.Path, "OK");
 
 				viewModel.Expense.Receipt = file.Path;
-
-				image.Source = ImageSource.FromStream(() =>
+                
+                image.Source = ImageSource.FromStream(() =>
 					{
-						var stream = file.GetStream();
-						file.Dispose();
+                        Stream stream = file.GetStream();
+                        file.Dispose();
 						return stream;
 					}); 
 			};
 				
 
 		}
-			
 
-
-		protected override void OnAppearing()
+        protected override void OnAppearing()
 		{
 			base.OnAppearing();
 
